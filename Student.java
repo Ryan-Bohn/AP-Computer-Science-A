@@ -1,17 +1,30 @@
+
 public class Student {
 	
 	private String name;
-	private double gpa;
+	private int studentID;
+	private int grade;
 	
-	Student(String n, double g) {
-		name = n;
-		gpa = g;
+	public Student(String name, int studentID, int grade) {
+		this.name = name;
+		this.studentID = studentID;
+		this.grade = grade;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public int getStudentID() {
+		return studentID;
+	}
+
+	public int getGrade() {
+		return grade;
 	}
 	
-	public String getName() {
-		
-		return name;
-		
+	public boolean equals(Student s) {
+		return s.getName().equals(name) && s.getStudentID() == studentID && s.getGrade() == grade;
 	}
 	
 }
